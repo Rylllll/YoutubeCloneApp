@@ -71,7 +71,6 @@ Some of the features implemented include:
 * Deterministic mock view counts and publish dates
 * Fully playable videos using the Pexels API
 
-Overall, my goal was to build an application that feels familiar to users while demonstrating clean architecture, reusable components, TypeScript best practices, and an approach that is easy to explain and discuss during a technical interview.
 
 ---
 
