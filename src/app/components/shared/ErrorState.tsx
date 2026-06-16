@@ -1,0 +1,22 @@
+import { AlertTriangle } from "lucide-react";
+import { Button } from "../ui/button";
+
+interface ErrorStateProps {
+  message?: string;
+  onRetry?: () => void;
+}
+
+export function ErrorState({ message = "Something went wrong while loading.", onRetry }: ErrorStateProps) {
+  return (
+    <div className="flex flex-col items-center justify-center gap-3 py-20 text-center">
+      <AlertTriangle className="size-10 text-destructive" />
+      <p className="text-foreground">Failed to load</p>
+      <p className="max-w-sm text-sm text-muted-foreground">{message}</p>
+      {onRetry && (
+        <Button variant="outline" onClick={onRetry} className="mt-2">
+          Try again
+        </Button>
+      )}
+    </div>
+  );
+}
